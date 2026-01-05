@@ -1,0 +1,48 @@
+@media only screen
+and (max-width : 500px) {
+    .overlay_item {
+        font-size: 4px;
+    }
+}
+
+
+@media only screen
+and (min-width : 500px)
+and (max-width : 600px) {
+    .overlay_item {
+        font-size: 6px;
+    }
+}
+
+@media only screen
+and (min-width : 600px)
+and (max-width : 800px) {
+    .overlay_item {
+        font-size: 8px;
+    }
+}
+
+@media only screen
+and (min-width : 800px)
+and (max-width : 1000px) {
+    .overlay_item {
+        font-size: 10px;
+    }
+}
+
+
+@media only screen
+and (min-width : 1000px)
+and (max-width : 1200px) {
+    .overlay_item {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen
+and (min-width : 1200px){
+    .overlay_item {
+        font-size: 13px;
+    }
+}

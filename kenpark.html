@@ -1,0 +1,355 @@
+<html>
+
+
+    <head>
+    <!--<meta charset="utf-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- 인코딩설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 익스플로러 호환성설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="myfavicon.ico">
+
+    <title>Ken Park</title>
+
+    <!-- Bootstrap -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 커스텀 스타일 불러오기 -->
+    <link href="public/css/main.css" rel="stylesheet">
+
+    <style>
+    .kp-col{
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+    </style>
+
+    </head>
+    <body onload="onBodyLoad();">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+    <button id="navbar_button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <!--<a class="navbar-brand" href="#">Ken Park</a>-->
+    <a class="navbar-brand" href="javascript:window.location.reload(true)">Ken Park</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+    <li id="li_about"><a onclick="onClick_About();">About</a></li>
+    <li id="li_resume" class="active"><a onclick="onClick_Resume();">Resume</a></li>
+    <li id="li_portfolio"><a onclick="onClick_Portfolio(0);">Portfolio</a></li>
+    <li id="li_contact"><a onclick="onClick_Contact();">Contact</a></li>
+    </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+    </nav>
+
+    <!-- 컨테이너 -->
+    <div class="container">
+
+    <!-- Example row of columns -->
+    <div id="main_body" class="row">
+
+    </div>
+
+
+    <div class="selective-layout">
+
+    </div>
+
+    <hr>
+    <footer>
+    <p>&copy; Ken Park 2016</p>
+    </footer>
+    </div>
+    <!-- /컨테이-->
+
+	<script type="text/template" id="content_about">
+
+    <div class="kp-col">
+    <h3><b>Ken Park</b></h3>
+    <p> Currently working as a Indie Game Developer. Creative Director & Programmer at <a href="https://www.facebook.com/profile.php?id=100013243391447">PopoMint</a></p>
+    <p><img src=public/images/kpresume/location_icon.png style="width: 32px"> Seoul, South Korea</p>
+    <p><img src=public/images/kpresume/link_icon.png style="width: 32px"> <a href="https://ken-park.appspot.com">ken-park.appspot.com </a></p>
+    <p><img src=public/images/kpresume/email_icon.jpg style="width: 32px"> ken.park.kr@gmail.com</p>
+    </div>
+
+	</script>
+
+    <script type="text/template" id="content_contact">
+    <h3><b>Contact Info.</b></h3>
+    <div class="kp-col">
+    <p><img src=public/images/kpresume/email_icon.jpg style="width: 32px"> ken.park.kr@gmail.com</p>
+    <p><img src=public/images/kpresume/phone_icon.png style="width: 32px"> +82-10-5652-5713</p>
+    </div>
+    </script>
+
+    <script type="text/template" id="content_portfolio-desktop">
+        <!-- 데스크탑 레이아웃 -->
+        <div class="row">
+        <!-- 왼쪽 컬럼 -->
+        <div class="col-sm-9">
+
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <div id="video-container">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <div id="video-desc">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /왼쪽 컬럼 -->
+
+        <!-- 오른쪽 컬럼 -->
+        <div class="col-sm-3">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="videoList">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /오른쪽 컬럼 -->
+
+        </div>
+    <!-- /데스크탑 레이아웃 -->
+    </script>
+
+    <script type="text/template" id="content_portfolio-mobile">
+    <!-- 모바일 레이아웃 -->
+        <div class="row">
+        <!-- 윗 열 -->
+            <div class="col-xs-12">
+
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div id="video-container">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div id="video-desc">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <!-- /윗 열 -->
+        </div>
+
+        <hr>
+
+        <div class="row">
+        <!-- 아래 열  -->
+            <div class="col-xs-12">
+                <div id="videoList">
+                </div>
+            </div>
+        <!-- /아래 열 -->
+        </div>
+    <!-- /모바일 레이아웃 -->
+    </script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <!--<script src="js/vendor/bootstrap.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <script src="public/js/vendor/bootstrap.js"></script>
+    <script src="public/js/vendor/underscore-min.js"></script>
+    <script src="public/js/kenpark/content_resume.js"></script>
+    <script src="public/JungLib.js"></script>
+    <script type="text/javascript">
+
+    var videoInfoList = [
+        {
+            id: "World Conquest2",
+            img: "public/images/kpresume/port_pic0.jpg",
+            src :"https://www.youtube.com/embed/NEm5KDLGqc8"
+        },
+        {
+            id:"World Conquest",
+            img: "public/images/kpresume/port_pic1.jpg",
+            src: "https://www.youtube.com/embed/SRKyQWBV9_s",
+            stores: [
+                { url:"https://play.google.com/store/apps/details?id=com.Hanbitsoft.Conquest", img:"public/images/kpresume/store_android.png"},
+                { url:"https://itunes.apple.com/kr/app/segyejeongbog-for-kakao/id942369946?l=en&mt=8", img:"public/images/kpresume/store_apple.png"},
+            ]
+        },
+        {
+            id:"Kaizin Rumble",
+            img: "public/images/kpresume/port_pic2.jpg",
+            src: "https://www.youtube.com/embed/VB5cVt61y5Q"
+        },
+        {
+            id:"ProjectCOC",
+            img: "public/images/kpresume/port_pic3.jpg",
+            src: "https://www.youtube.com/embed/jsO4d5t_Xmk"
+        },
+        {
+            id: "projectTAR",
+            img: "public/images/kpresume/port_pic5.JPG",
+            src :"https://www.youtube.com/embed/ms6Dd4RJFYk"
+        },
+        {
+            id: "Aeronauts",
+            img: "public/images/kpresume/port_pic4.jpg",
+            src :"https://www.youtube.com/embed/Btvarg8EOJI"
+        }
+    ];
+
+    var g_jUtil;
+    function onBodyLoad(){
+
+        g_jUtil = new JLIB.Util();
+
+        _open_resume();
+    }
+
+    function _onClickCommon(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        $("#navbar").collapse("hide");
+
+        $("#li_about").removeClass();
+        $("#li_resume").removeClass();
+        $("#li_portfolio").removeClass();
+        $("#li_contact").removeClass();
+    }
+
+    function onClick_Resume(){
+
+        _onClickCommon();
+
+        $("#li_resume").addClass("active");
+
+        _open_resume();
+    }
+
+    function _open_resume(){
+        $.get("public/js/kenpark/content_resume.html", function(resumeTemplate){
+            $("#main_body").html(_.template(resumeTemplate, {items: g_contentResume}));
+        });
+    }
+
+    function onClick_About(){
+
+        _onClickCommon();
+
+        $("#li_about").addClass("active");
+
+        var aboutTemplate = $("#content_about").html();
+         $("#main_body").html(_.template(aboutTemplate,{}));
+    }
+
+    function onClick_Portfolio(porfolio_index){
+
+        _onClickCommon();
+
+        $("#li_portfolio").addClass("active");
+
+        console.log("portfolio");
+
+
+        if( g_jUtil.isMobile() == false )
+        {
+            var desktopTemplate = $("#content_portfolio-desktop").html();
+            $("#main_body").html(_.template(desktopTemplate,{}));
+        }
+        else
+        {
+            var mobileTemplate = $("#content_portfolio-mobile").html();
+            $("#main_body").html(_.template(mobileTemplate,{}));
+        }
+
+        // video list
+        var tempStr = "";
+        for(var i=0; i< videoInfoList.length; i++){
+            tempStr += "<a onclick='onClick_Portfolio(" + i + ");'>";
+
+            tempStr += "<div class='row'>";
+            tempStr += "<div class='col-xs-12'>";
+
+            tempStr += "<img src='" + videoInfoList[i].img + "' style='width: 120px'>";
+
+            tempStr += "</div>";
+            tempStr += "</div></a><br>";
+
+        }
+
+        $("#videoList").html(tempStr);
+
+
+        _open_portfolio(porfolio_index);
+    }
+
+    function _open_portfolio(porfolio_index){
+        var videoInfo = videoInfoList[porfolio_index];
+        var videoSrc = videoInfo.src;
+
+        var temp = "";
+
+        if( g_jUtil.isMobile() == false ){
+            temp =  '<iframe width="560" height="315" src="' + videoSrc + '" frameborder="0" allowfullscreen></iframe>';
+        }
+        else{
+            var widthSize = $("#main_body").width();
+            var heightSize = widthSize / 1.78;
+
+            temp =  '<iframe width="' + widthSize + '" height="' + heightSize + '" src="' + videoSrc + '" frameborder="0" allowfullscreen></iframe>';
+        }
+
+
+        $("#video-container").html(temp);
+
+        var descStr = "";
+        descStr += '<h3>' + videoInfo.id + '</h3><br>';
+
+        if( videoInfo.stores != null ) {
+
+            descStr += "<br>";
+            for(var i=0; i<videoInfo.stores.length; i++){
+                if(  videoInfo.stores[i] != undefined ){
+                    descStr += "<a href='" + videoInfo.stores[i].url + "'>";
+                    descStr += "<img src='" + videoInfo.stores[i].img + "'></a>";
+                }
+            }
+        }
+
+        descStr += '<br>';
+
+        $("#video-desc").html(descStr);
+    }
+
+    function onClick_Contact(){
+
+        _onClickCommon();
+
+        $("#li_contact").addClass("active");
+
+        var contactTemplate = $("#content_contact").html();
+         $("#main_body").html(_.template(contactTemplate,{}));
+    }
+
+    </script>
+    </body>
+
+</html>

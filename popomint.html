@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html> <!--lang="en"-->
+<head>
+<!--<meta charset="utf-8">-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- 인코딩설정 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 익스플로러 호환성설정 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="myfavicon.ico">
+
+<title>Popomint Inc.</title>
+
+<!-- Bootstrap -->
+<link href="public/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 커스텀 스타일 불러오기 -->
+<link href="public/css/main.css" rel="stylesheet">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<style>
+.kp-col{
+position: relative;
+min-height: 1px;
+padding-left: 15px;
+padding-right: 15px;
+}
+</style>
+
+</head>
+<body onload="onBodyLoad();">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button id="navbar_button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!--<a class="navbar-brand" href="#">Ken Park</a>-->
+<a style="float:none" class="navbar-brand" href="javascript:window.location.reload(true)"><img style="padding-top: 10px" width="25%" src="public/images/popomint/logo_POPOMINT_gray_small.png"> &trade;</a>
+</div>
+<div id="navbar" class="collapse navbar-collapse">
+<ul class="nav navbar-nav">
+<li id="li_about"><a onclick="onClick_About();">About</a></li>
+<li id="li_work" class="active"><a onclick="onClick_Work();">Work</a></li>
+<li id="li_blog"><a onclick="onClick_Blog(0);">Blog</a></li>
+<li id="li_shop"><a onclick="onClick_Shop(0);">Shop</a></li>
+<li id="li_contact"><a onclick="onClick_Contact();">Contact</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
+
+<!-- 컨테이너 -->
+<div class="container">
+
+<!-- Example row of columns -->
+<div id="main_body" class="row">
+
+</div>
+
+
+<div class="selective-layout">
+
+</div>
+
+<hr>
+<footer style="padding-left: 2.0em">
+<table class="tg">
+<tr>
+<th class="tg-031e"><div style="font-size: 0.75em">&copy; POPOMINT 2017</div></th>
+<th class="tg-031e" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://fb.me/popomint.kr"><img src=public/images/common/facebook_g.png
+style="width: 32px"></a></th>
+</tr>
+<tr>
+<td class="tg-031e"><div style="font-size: 0.55em">ALL RIGHTS RESERVED</div></td>
+</tr>
+</table>
+
+
+
+</footer>
+</div>
+<!-- /컨테이-->
+
+<script type="text/template" id="content_about">
+
+<div class="kp-col">
+<h3><b>About Popomint</b></h3>
+<p> Our company develops mobile games and character products featuring a polar bear named Poe. Through these products, customers' purchases contribute to help polar bears in Arctic area.</p>
+<br><br>
+</div>
+
+<div class="kp-col">
+<h4><b>Partners</b></h4>
+<div class="col-sm-12">
+<table class="tg">
+<tr>
+<th class="tg-031e" rowspan="2"><img src=public/images/common/int_polar_bears.png style="width: 50%"></th>
+<th class="tg-031e"><img src=public/images/common/tumblbug.png style="width: 50%"></th>
+</tr>
+<tr>
+<td class="tg-031e"> <img src=public/images/common/kickstarter_g.png style="width: 60%"></td>
+</tr>
+</table>
+<br><br>
+&nbsp;
+</div>
+</div>
+
+</div>
+
+<div class="kp-col">
+<h4><b>History:</b></h4>
+<div class="col-sm-12">
+<div class="col-sm-4">
+<p align="center"><img src=public/images/popomint/popomint_history_4.jpg style="width: 200px"></p>
+<p align="center"><img src=public/images/popomint/popomint_history_2.jpg style="width: 200px"></p>
+<p align="center"><img src=public/images/popomint/popomint_history_5.jpg style="width: 200px"></p>
+<p align="center"><img src=public/images/popomint/popomint_history_3.jpg style="width: 200px"></p>
+<p align="center"><img src=public/images/popomint/popomint_history_6.jpg style="width: 200px"></p>
+<p align="center"><img src=public/images/popomint/popomint_history_1.jpg style="width: 200px"></p>
+</div>
+<div class="col-sm-8">
+<p></p>
+<ul style="list-style-type:circle">
+<li>November, 2016 - Present, participated in 'HOMEE' project for developing event-driven marketing platform.</li>
+<li>12th August - 16th September, 2016, chosen as participant in MVP(Minimal Viable  Supporting Product) Financial Supporting Program by KISED</li>
+<li>24th - 26th August, 2016, participated in 'IGJam 16' held at 2016 Gamescom, Cologne, German, organized by InnoGames LLC.</li>
+<li>July - October, 2016, completed Smart Creator Program, organized by KISED (Korean Institute of Startup & Enterpreneurship Development)</li>
+</ul>
+</div>
+</div>
+</div>
+
+</script>
+
+<script type="text/template" id="content_shop">
+
+<div class="kp-col">
+<h3><b>SHOP</b></h3>
+<div class="col-sm-12">
+<div class="col-sm-6">
+<img src=public/images/popomint/shop_temp1.PNG>
+</div>
+<div class="col-sm-6">
+<img src=public/images/popomint/shop_temp2.PNG>
+</div>
+</div>
+</div>
+</script>
+
+<script type="text/template" id="content_contact">
+
+<div class="kp-col">
+<h3><b>Contact Info.</b></h3>
+<div class="col-sm-12">
+<p><img src=public/images/kpresume/location_icon.png style="width: 32px"> Seoul, South Korea</p>
+<p><img src=public/images/kpresume/email_icon.jpg style="width: 32px"> popomint.kr@gmail.com</p>
+<p><img src=public/images/kpresume/phone_icon.png style="width: 32px"> +82-10-5652-5713</p>
+<p><img src=public/images/common/facebook_g.png style="width: 32px"> <a href="http://fb.me/popomint.kr">Popomint Facebook</a> </p>
+<p><img src=public/images/kpresume/link_icon.png style="width: 32px"> <a href="http://popomint.appspot.com">popomint.appspot.com </a></p>
+</div>
+</div>
+</script>
+
+
+<script type="text/template" id="content_work">
+
+<div class="kp-col">
+<h3><b>WORK</b></h3>
+<p>Under Construction</p>
+</div>
+
+</script>
+
+<script type="text/template" id="content_blog">
+
+<div class="kp-col">
+<h3><b>BLOG</b></h3>
+<p>Under Construction</p>
+</div>
+
+</script>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<!--<script src="public/js/vendor/bootstrap.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+<script src="public/js/vendor/bootstrap.js"></script>
+<script src="public/js/vendor/underscore-min.js"></script>
+<script src="public/JungLib.js"></script>
+<script type="text/javascript">
+
+var videoInfoList = [
+{
+id: "World Conquest2",
+img: "public/images/kpresume/port_pic0.jpg",
+src :"https://www.youtube.com/embed/NEm5KDLGqc8"
+},
+{
+id:"World Conquest",
+img: "public/images/kpresume/port_pic1.jpg",
+src: "https://www.youtube.com/embed/SRKyQWBV9_s",
+stores: [
+{ url:"https://play.google.com/store/apps/details?id=com.Hanbitsoft.Conquest", img:"public/images/kpresume/store_android.png"},
+{ url:"https://itunes.apple.com/kr/app/segyejeongbog-for-kakao/id942369946?l=en&mt=8", img:"public/images/kpresume/store_apple.png"},
+]
+},
+{
+id:"Kaizin Rumble",
+img: "public/images/kpresume/port_pic2.jpg",
+src: "https://www.youtube.com/embed/VB5cVt61y5Q"
+},
+{
+id:"ProjectCOC",
+img: "public/images/kpresume/port_pic3.jpg",
+src: "https://www.youtube.com/embed/jsO4d5t_Xmk"
+},
+{
+id: "projectTAR",
+img: "public/images/kpresume/port_pic5.jpg",
+src :"https://www.youtube.com/embed/ms6Dd4RJFYk"
+},
+{
+id: "Aeronauts",
+img: "public/images/kpresume/port_pic4.jpg",
+src :"https://www.youtube.com/embed/Btvarg8EOJI"
+}
+];
+
+var g_jUtil;
+function onBodyLoad(){
+
+g_jUtil = new JLIB.Util();
+
+var resumeTemplate = $("#content_about").html();
+$("#main_body").html(_.template(resumeTemplate,{}));
+}
+
+function _onClickCommon(){
+document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+$("#navbar").collapse("hide");
+
+$("#li_about").removeClass();
+$("#li_work").removeClass();
+$("#li_blog").removeClass();
+$("#li_shop").removeClass();
+$("#li_contact").removeClass();
+}
+
+function onClick_Work(){
+
+_onClickCommon();
+
+$("#li_work").addClass("active");
+
+var resumeTemplate = $("#content_work").html();
+$("#main_body").html(_.template(resumeTemplate,{}));
+}
+
+function onClick_About(){
+
+_onClickCommon();
+
+$("#li_about").addClass("active");
+
+var aboutTemplate = $("#content_about").html();
+$("#main_body").html(_.template(aboutTemplate,{}));
+}
+
+function onClick_Shop(){
+
+_onClickCommon();
+
+$("#li_shop").addClass("active");
+
+var aboutTemplate = $("#content_shop").html();
+$("#main_body").html(_.template(aboutTemplate,{}));
+}
+
+function onClick_Blog(porfolio_index){
+
+    _onClickCommon();
+
+    $("#li_blog").addClass("active");
+
+    var blogTemplate = $("#content_blog").html();
+    $("#main_body").html(_.template(blogTemplate,{}));
+}
+
+function onClick_Contact(){
+
+_onClickCommon();
+
+$("#li_contact").addClass("active");
+
+var contactTemplate = $("#content_contact").html();
+$("#main_body").html(_.template(contactTemplate,{}));
+}
+
+</script>
+</body>
+
+</html>

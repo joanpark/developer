@@ -1,0 +1,403 @@
+/*
+ * Globals
+ */
+
+
+
+#main_body.row.toggled {
+   padding-left: 265px;
+   margin-right: -265px;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
+/* side menu scrolling
+.navbar-collapse.collapsing {
+    -webkit-transition: height .35s ease;
+    transition: height .35s ease;
+}    */
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+    color: #333;
+    text-shadow: none; /* Prevent inheritence from `body` */
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.navbar {
+    min-height: 50px;
+}
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #949494;
+}
+
+
+
+.navbar-inverse .navbar-brand {
+    color: #f00;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #f00;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 15px;
+    font-size: 32px;
+    line-height: 20px;
+    height: 50px;
+}
+
+.navbar-toggle {
+float:left;
+}
+
+.navbar-search-icon {
+vertical-align: middle;
+margin: 7px;
+    float: right;
+width: 36px;
+    height: 36px;
+}
+
+/*
+ * Base structure
+ */
+.homee_btn{
+    background-color: #f04d4e;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.h_btn_login{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.base_div{
+    background: #ffffff;
+    margin: 5px;
+    padding: 0px;
+}
+
+.detail_div{
+    background: #ffffff;
+    margin: 5px;
+    padding: 15px;
+}
+
+
+
+
+html,
+body {
+    height: 100%;
+    background-color: #ececec;
+    /*padding-top: 35px;*/
+}
+body {
+    color: #92a8d1;
+    text-align: center;
+    text-shadow: 0 0px 0px rgba(0,0,0,.5);
+}
+
+.login_upper{
+    background-color: #f04d4e;
+    width : 100%;
+    height: 250px;
+    vertical-align: middle;
+}
+
+.login_upper >img{
+    position: relative;
+    top: 50%;
+        margin-top: -20px;
+}
+
+.login_lower{
+    text-align: center;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+    padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+    display: inline-block;
+}
+.masthead-nav > li + li {
+    margin-left: 20px;
+}
+.masthead-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* IE8 proofing */
+    color: rgba(255,255,255,.75);
+    border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .masthead-brand {
+        float: left;
+    }
+    .masthead-nav {
+        float: right;
+    }
+}
+
+.ex-btn-list{
+    display: inline-block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+    padding: 0 20px;
+}
+.cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+    color: #999; /* IE8 proofing */
+    color: rgba(255,255,255,.5);
+}
+
+/*
+.navbtn{
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbtn .icon-bar{
+    background-color: #949494;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.navbtn .icon-bar+.icon-bar {
+    margin-top: 4px;
+} */
+
+.navbtn{
+
+    border:none;
+
+    float: left;
+    position: relative;
+    margin-right: 0px;
+    padding: 9px 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: white;
+    border-radius: 4px;
+}
+.navbtn:focus{
+    outline: none;
+}
+
+.navbtn:hover, .navbar-brand:hover{
+    background-color: rgba(128, 128, 128, 0.16);
+}
+
+.navbar-inverse .navbar-brand:hover{
+    background-color: rgba(128, 128, 128, 0.16);
+}
+
+.base_div:hover{
+    outline-style: solid ;
+    outline-color: rgba(255, 0, 0, 0.2);
+   outline-width: 2px;
+}
+
+.hoverbtn:hover{
+    background-color: rgba(128, 128, 128, 0.16);
+}
+
+@media (min-width: 768px)  {
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+    .mastfoot {
+        position: fixed;
+        bottom: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+
+
+    .left_wing{
+        text-align: right;
+    }
+    .right_wing{
+        text-align: left;
+    }
+
+    .ex-btn-list{
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        /*width: 700px;*/
+    }
+}
+
+@media (min-width: 384px) {
+    .hm-col-1, .hm-col-2, .hm-col-3, .hm-col-4, .hm-col-5, .hm-col-6, .hm-col-7, .hm-col-8, .hm-col-9, .hm-col-10, .hm-col-11, .hm-col-12 {
+        float: left;
+    }
+    .hm-col-12 {
+        width: 98%;
+    }
+    .hm-col-11 {
+        width: 91.66666667%;
+    }
+    .hm-col-10 {
+        width: 83.33333333%;
+    }
+    .hm-col-9 {
+        width: 75%;
+    }
+    .hm-col-8 {
+        width: 66.66666667%;
+    }
+    .hm-col-7 {
+        width: 58.33333333%;
+    }
+    .hm-col-6 {
+        width: 50%;
+    }
+    .hm-col-5 {
+        width: 41.66666667%;
+    }
+    .hm-col-4 {
+        width: 33.33333333%;
+    }
+    .hm-col-3 {
+        width: 25%;
+    }
+    .hm-col-2 {
+        width: 16.66666667%;
+    }
+    .hm-col-1 {
+        width: 8.33333333%;
+    }
+}
+
+.img_ic_bi{
+    width: 10%
+}
+
+#div_franchise_detail > div{
+    font-size: 1.0em;
+}

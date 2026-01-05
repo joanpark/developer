@@ -1,0 +1,27 @@
+Projects:
+
+
+
+
+
+Archive:
+    - kenpark 페이지 복구 @done
+        - public 폴더 만들기 @done
+        - kenpark.html페이지에서 참조하는 js/css파일들 리스팅 @done
+            - css/bootstrap.min.css @done
+            - css/main.css @done
+            - js/vendor/bootstrap.js @done
+            - js/vendor/underscore.js @done
+            - JungLib.js @done
+        - kenpark.html페이지에서 참조하는 js/css파일들을 public 폴더 안에 넣기 @done
+        - 다른 페이지들도 하나씩 확인 @done
+            - exodus @done
+            - homee.html @done
+        - kenpark.html페이지에서 참조하는 이미지 파일들 리스팅 @done
+        - 이미지 파일들도 public 안으로 넣기 @done
+        - 폰트 파일들도 public 안으로 넣기 @done
+        - kenpark.html에서 참조하는 이미지 경로 수정 @done
+        - server.js 에서도 public 폴더를 public으로 설정 @done
+        - app.yaml 에서도 public 폴더를 public으로 설정 @done
+        - 잘 동작하는지 로컬서버에서 테스트 @done
+        - 잘 동작하는지 클라우드에서 배포 후 테스트 @done

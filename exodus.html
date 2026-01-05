@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html> <!--lang="en"-->
+    <head>
+    <!--<meta charset="utf-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- 인코딩설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 익스플로러 호환성설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Exodus The Game</title>
+
+    <!-- Bootstrap -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 커스텀 스타일 불러오기 -->
+    <link href="public/css/exodus/cover.css" rel="stylesheet">
+
+    <style>
+
+    .ex-col{
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
+    .ex-btn{
+    font-size: 12px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+    }
+    </style>
+
+    </head>
+    <body>
+    <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+    <div class="cover-container">
+
+        <div class="masthead clearfix" style="position: relative">
+            <div class="inner">
+
+
+                <h1 class="masthead-brand" style="float: none"><b>EXODUS THE GAME</b></h1>
+
+                <h5 class="masthead-brand" style="float: none; color: #8a8a8a"><b>Enjoy Minimalistic Epic Adventure</b></h5>
+
+            </div>
+        </div>
+
+        <div style="padding-top: 5px; padding-bottom: 5px">
+            <nav>
+            <ul class="nav masthead-nav" style="float: none">
+            <li class="active"><a href="#">Play</a></li>
+            <li><a href="#">Manual</a></li>
+            <li><a href="#">Story</a></li>
+            <li><a href="#">Support Us</a></li>
+            </ul>
+            </nav>
+        </div>
+
+
+        <div class="inner cover">
+
+            <div class="col-sm-2 left_wing">
+            <ul style="list-style: none">
+                <li class="ex-btn-list"><a href="#" class="btn ex-btn btn-default">stage 1</a></li>
+                <li class="ex-btn-list"><a href="#" class="btn ex-btn btn-default">stage 2</a></li>
+                <li class="ex-btn-list"><a href="#" class="btn ex-btn btn-default">stage 3</a></li>
+            </ul>
+            </div>
+
+            <div class="col-sm-8">
+                <div>
+                <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="300px" width="480px"></canvas>
+                </div>
+
+
+                <br>
+                <br>
+                <p>If you want play more, please leave your address.</p>
+                <p>
+    <div style="display: inline-block;">
+    <input type="text" placeholder="Email" class="form-control" style="display: inline-block; width: 300px">
+    <button type="submit" class="btn btn-success">Notify Me</button>
+    </div>
+                </p>
+
+
+            </div>
+
+            <div class="col-sm-2 right_wing">
+
+                <img src="public/images/common/kickstarter.png" style="width: 100%; max-width:60px">
+                <br>
+                <br>
+                <img src="public/images/common/tumblbug.png" style="width: 100%; max-width:120px">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="public/images/common/twitter.png" style="width: 100%; max-width:36px">
+                <img src="public/images/common/facebook.png" style="width: 100%; max-width:36px">
+            </div>
+
+            
+        </div>
+
+        <div class="mastfoot">
+        <div class="inner">
+        <p>&copy; 2016 Team Exodus</p>
+        </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <script src="public/js/vendor/bootstrap.js"></script>
+
+
+    
+
+    </body>
+
+</html>

@@ -1,0 +1,64 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    padding-top: 75px;
+    padding-bottom: 20px;
+}
+
+.navbar {
+	z-index: 3000;
+}
+
+a:hover{text-decoration: none; cursor: pointer;}
+ul{list-style-type: none;list-style-image: none;list-style-position: outside;}
+
+#main-container {margin: 10px auto;}
+
+.video-item-group a{color:#333;overflow: hidden;padding: 0 5px 0 0;display: block;position: relative;zoom:1;	}
+.video-item{margin-bottom: 15px;position: relative;}
+.thumb-wrap{overflow: hidden;display: inline-block;position: relative;}
+.video-item .thumb-wrap{margin: 0 8px 0 0;float: left;}
+.running-time{padding:0 4px;font-weight:bold;font-size:11px;background-color:#000;color:#fff!important;height:14px;line-height:14px;opacity:.75;filter:alpha(opacity=75);display:-moz-inline-stack;vertical-align:top;zoom:1;display:inline-block;*display:inline;*zoom:1;border-radius:3px}
+.running-time{position: absolute;right:2px;bottom:2px;}
+.video-item .title{color:#03c;line-height: 1.2;font-size: 13px;font-weight: nomal;display: block;margin-bottom: 2px;max-height: 2.4em; overflow:hidden; text-overflow:ellipsis; }
+.video-item-group .video-item .title{color:#333;font-size: 13px; font-weight: bold;}
+.video-item .stat{display: block;height: 1.4em;line-height: 1.4em;white-space: nowrap;}
+.video-item-group .video-item .stat,
+.video-item-group .video-item .descripition{font-size: 11px;color: #999;} 
+
+
+
+
+.discussion .title {
+	background-color: #fff;
+	border: none;
+	border-bottom: 0;
+	border-top: 0;
+	color: #666;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: normal;
+	padding: 0 0 0 0;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.video-item{
+    text-align: left;
+}
+
+.video-item-group
+{
+    text-align: center;
+}
+.test_collapse{
+
+}
+
+
+

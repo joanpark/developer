@@ -1,0 +1,45 @@
+<div class="kp-col">
+    <h3>
+        <table>
+            <tr>
+                <td class="hoverbtn" width="20%" style="font-size:1.2em; text-align: left" onclick="onBodyLoad();"> < </td>
+                <td style="color:red; font-size:1.2em; text-align: left"><b>이벤트</b></td>
+            </tr>
+        </table>
+    </h3>
+
+    <@
+    _.each(items,function(item,i){
+    @>
+
+    <div class="hm-col-12" onclick="onClick_EventDetail(<@= i @>);">
+        <div class="base_div">
+            <table class="tg">
+                <tr>
+                    <th class="tg-yw4l" style="text-align: center; padding-right: 15px" rowspan=4><image src="<@= item.image @>" style="width: 10.0em"></image></th>
+                    <th class="tg-yw4l"></th>
+                </tr>
+                <tr>
+                    <td class="tg-yw4l" style="text-align: left; font-size: 1.5em; color:black"><@- item.name @></td>
+                </tr>
+                <tr>
+                    <td class="tg-yw4l" style="text-align: left"><@- item.addr @></td>
+                </tr>
+
+                <tr>
+
+                    <td class="tg-yw4l" style="text-align: left">
+                        <font color=grey><@- item.eDate @></font>
+                        <font color=red><@- item.title @></font>
+                        <!--<image src="public/images/homee/ic_arrow_down.png"></image>-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <@
+    });
+    @>
+
+</div>

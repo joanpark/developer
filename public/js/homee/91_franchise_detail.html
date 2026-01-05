@@ -1,0 +1,73 @@
+<div class="kp-col">
+    <h3>
+        <table>
+            <tr>
+                <td class="hoverbtn" width="20%" style="font-size:1.2em; text-align: left" onclick="onClick_Franchise(false);">< </td>
+                <td style="color:red; font-size:1.2em; text-align: left"><b>브랜드별 상세페이지</b></td>
+            </tr>
+        </table>
+    </h3>
+</div>
+
+<div id="div_franchise_detail" class="hm-col-12">
+    <div class="base_div">
+        <table class="tg">
+
+            <tr>
+                <th class="tg-031e" rowspan="2"  style="text-align: center"><image src="<@= item.image @>" style="height: 10.0em"></image></th>
+                <th class="tg-yw4l" colspan="2" style="text-align: left">
+                    <@- item.name @> <br>
+                    <font style="font-size: 1.5em; color:black"><@- item.product @></font> <br>
+                    <font color=grey><@- item.newPrice @></font>
+                    <font color=red style="border-qbottom: 1px solid #f00; line-height:0.1em; margin:10px 0 20px;"><@- item.price @> </font>
+                    <font color=red><@- item.discount @>%</font>
+                    <image src="public/images/homee/ic_arrow_down.png"></image>
+                </th>
+            </tr>
+            <tr>
+                <td class="tg-yw4l">
+                    <font color=black>사용처<br>
+                    제품명<br>
+                    제공처</font>
+                </td>
+                <td class="tg-031e">
+                    <@- item.name @><br>
+                    <@- item.product @><br>
+                    M12
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan=3 class="tg-yw4l" style="text-align: left">제품설명</td>
+            </tr>
+            <tr>
+                <td colspan=3 class="tg-yw4l" style="text-align: left;">
+                    제품 상세 설명이 들어가는 곳입니다.<br>
+                    제품 상세 설명이 들어가는 곳입니다.<br>
+                    제품 상세 설명이 들어가는 곳입니다.<br>
+                    제품 상세 설명이 들어가는 곳입니다.
+                </td>
+            </tr>
+            <tr>
+                <td colspan=3 class="tg-yw4l" style="text-align: left">유의사항</td>
+            </tr>
+            <tr>
+                <td>
+                    <font color=black>유효기간<br>
+                        구매제한<br>
+                        이용안내<br></font>
+                </td>
+                <td colspan=2 class="tg-yw4l" style="text-align: left;">
+                       2017-08-19<br>
+                    1일 5개 구매가능, 최대 5개 구매가능<br>
+                    해당 상품은 시즌 할인 상품으로 유효기간 연장이 불가합니다.<br>
+                    (단, 유효기간은 만료 후 기프티콘 정책에 따라 환불 가능합니다)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><br><br><button style="padding-right: 20px; padding-left: 20px;" class="homee_btn" onclick="onClick_BuyWithHomee(true);">호미로 구매하기</button></td>
+            </tr>
+
+        </table>
+    </div>
+</div>

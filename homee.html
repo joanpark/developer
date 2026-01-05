@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html> <!--lang="en"-->
+<head>
+    <!--<meta charset="utf-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <!-- 인코딩설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 익스플로러 호환성설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>HOMEE</title>
+
+    <!-- Bootstrap -->
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/hurkanSwitch.css" rel="stylesheet">
+
+    <!-- 커스텀 스타일 불러오기 -->
+    <link href="public/css/homee/homee.css" rel="stylesheet">
+    <link href="public/css/simple-sidebar.css" rel="stylesheet">
+
+    <style>
+        .kp-col{
+            position: relative;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+    <script type="text/javascript">
+
+    var mainPageData = {
+        newPlaces : [{name: "에이블스퀘어", thumbnail:"public/images/homee/main_picture.png"}, {name: "에이블스퀘어", thumbnail:"public/images/homee/main_picture.png"}],
+        brand1 : {name:"엔젤리너스", discount:"30%", image:"public/images/homee/brand1.png"},
+        brand2 : {name:"파리바게트", discount:"15%", image:"public/images/homee/brand2.png"},
+        gift1 : {name:"에이블스퀘어", amount:"10,000원", image:"public/images/homee/brand3.png"},
+        gift2 : {name:"에이블스퀘어", amount:"15,000원", image:"public/images/homee/brand3.png"},
+        branches: [
+            {name:"에이블스퀘어 서초점", subTitle:"세련된 디자인과 편안한 착석감이 포인...", address:"서울특별시 서초구 서초동", thumbnail:"public/images/homee/brand3.png"},
+            {name:"윙스터디 강남 1호점", subTitle:"아늑하고 조용한 분위기의 그룹스터디...", address:"서울특별시 서초구 서초동", thumbnail:"public/images/homee/branch2.png"},
+            {
+                name: "논골집 서초점",
+                address: "서울특별시 서초구 서초동",
+                thumbnail: "public/images/homee/branch1.png",
+                subTitle: "따뜻한 분위기와 맛있는 식사가 가능한 곳"
+            },
+            {
+                name: "윙스터디 강남1호점",
+                address: "서울특별시 서초구 서초동",
+                thumbnail: "public/images/homee/branch2.png",
+                subTitle: "아늑하고 조용한 분위기의 그룹 스터디"
+            },
+            {
+                name: "에이블스퀘어 서초점",
+                address: "서울특별시 서초구 서초동",
+                thumbnail: "public/images/homee/brand3.png",
+                subTitle: "세련된 디자인과 편안한 착석감이 포인트"
+            },
+            {
+                name: "폴바셋바리스타",
+                address: "서울특별시 서초구 서초동",
+                thumbnail: "public/images/homee/branch1.png",
+                subTitle: "세련된 디자인과 편안한 착석감이 포인트"
+            },
+            {
+                name: "크리스피크림 강남점",
+                address: "서울특별시 강남구 삼성2동",
+                thumbnail: "public/images/homee/branch1.png",
+                subTitle: "세련된 디자인과 편안한 착석감이 포인트"
+            },
+            {
+                name: "파리바게트 서초점",
+                address: "서울특별시 서초구 서초동",
+                thumbnail: "public/images/homee/branch1.png",
+                subTitle: "세련된 디자인과 편안한 착석감이 포인트"
+            }
+        ],
+        gifts:"8",
+        points:58600,
+        coupons:38,
+        tickets:5
+    };
+
+    var franchiseDataList = [
+        {
+            name: "엔젤리너스",
+            product : "블루베리 에이드",
+            price: 4180,
+            newPrice: 2870,
+            discount: 30,
+            image: "public/images/homee/brand1.png"
+        },
+        {
+            name: "파리바게트",
+            product : "치즈케이크",
+            price: 5100,
+            newPrice: 4870,
+            discount: 15,
+            image: "public/images/homee/brand2.png"
+        },
+        {
+            name: "엔젤리너스",
+            product : "블루베리 에이드",
+            price: 4180,
+            newPrice: 2870,
+            discount: 30,
+            image: "public/images/homee/brand1.png"
+        },
+        {
+            name: "파리바게트",
+            product : "치즈케이크",
+            price: 5100,
+            newPrice: 4870,
+            discount: 15,
+            image: "public/images/homee/brand2.png"
+        }
+    ];
+
+    var eventDataList = [
+        {
+            name: "파리바게트 서초점",
+            eDate: "2017.1.31 14:00 ~ 16:00",
+            addr: "서울특별시 서초구 서초동",
+            image: "public/images/homee/event1.png",
+            description: "고객 감사 사은 이벤트",
+            title: "30% 할인 이벤트!!"
+        },
+        {
+            name: "폴바셋바리스타",
+            eDate: "2017.1.28 11:00 ~ 12:00",
+            addr: "서울특별시 서초구 서초동",
+            image: "public/images/homee/event2.png",
+            description: "고객 감사 사은 이벤트",
+            title: "20% 할인 이벤트!!"
+        },
+        {
+            name: "크리스피크림 강남점",
+            eDate: "2017.1.28 10:00 ~ 12:00",
+            addr: "서울특별시 강남구 삼성2동",
+            image: "public/images/homee/event3.png",
+            description: "고객 감사 사은 이벤트",
+            title: "30% 할인 이벤트!!"
+        },
+        {
+            name: "파리바게트 서초점",
+            eDate: "2017.1.26 15:00 ~ 18:00",
+            addr: "서울특별시 서초구 서초동",
+            image: "public/images/homee/event1.png",
+            description: "고객 감사 사은 이벤트",
+            title: "50% 할인 이벤트!!"
+        },
+    ];
+
+    var eventResultDataList = [
+        {
+            name: "파리바게트 서초점",
+            period: "2017.1.31 14:00 ~ 16:00",
+            address: "서울특별시 서초구 서초동",
+            discount: 30,
+            image: "public/images/homee/event1.png",
+            on : true
+        },
+        {
+            name: "폴바셋바리스타",
+            period: "2017.1.28 11:00 ~ 12:00",
+            address: "서울특별시 서초구 서초동",
+            discount: 20,
+            image: "public/images/homee/event2.png",
+            on : true
+        },
+        {
+            name: "크리스피크림 강남점",
+            period: "2017.1.28 10:00 ~ 12:00",
+            address: "서울특별시 강남구 삼성2동",
+            discount: 30,
+            image: "public/images/homee/event3.png",
+            on : false
+        },
+        {
+            name: "파리바게트 서초점",
+            period: "2017.1.26 15:00 ~ 18:00",
+            address: "서울특별시 서초구 서초동",
+            discount: 50,
+            image: "public/images/homee/event1.png",
+            on : false
+        },
+    ];
+
+    var settingTempData = {
+        pushOn : false,
+        versionString: "v.1.1.1"
+    };
+
+    var g_jUtil;
+    var g_kakaoId;
+    function fn_quick(){
+        alert("퀵버튼 테스트");
+    }
+
+    function onClick_Login(){
+
+        console.log($('#txt_kakaoId').val());
+        console.log($("#txt_phone").val());
+        console.log($("#txt_userName").val());
+        console.log($("#txt_authNumber").val());
+
+
+        if( $("#txt_kakaoId").val() == "" ||
+                $("#txt_phone").val() == "" ||
+                $("#txt_userName").val() == "" ||
+                $("#txt_authNumber").val() == "" ) {
+
+            alert("입력 오류");
+
+        }
+        else{
+            _onBodyLoad($("#txt_kakaoId").val() ,
+                    $("#txt_phone").val() ,
+                    $("#txt_userName").val() ,
+                    $("#txt_authNumber").val()
+            );
+        }
+    }
+
+    function onClick_SendAuthNum(){
+        console.log($('#txt_kakaoId').val());
+        console.log($("#txt_phone").val());
+
+
+        if( $("#txt_kakaoId").val() == "" ||
+                $("#txt_phone").val() == "" ){
+
+            alert("입력 오류");
+
+        }
+        else{
+                ajaxPost("http://api.homee.kr/login/req.ajax", {phone: $("#txt_phone").val(), kakaoId: $("#txt_kakaoId").val() }, function(data, temp1, temp2){
+                      if( data.result ){
+                          alert("인증번호를 전송하였습니다.");
+                      }
+                        else{
+                          alert("입력 정보 오류!");
+                      }
+                }, null);
+        }
+    }
+
+    function onBodyLoad(){
+        if( $.cookie("c_kakaoId") == undefined ||
+                $.cookie("c_phone")==undefined ||
+                $.cookie("c_userName")==undefined ||
+                $.cookie("c_authNumber")==undefined ||
+                $.cookie("c_kakaoId") == "undefined" ||
+                $.cookie("c_phone")=="undefined" ||
+                $.cookie("c_userName")=="undefined" ||
+                $.cookie("c_authNumber")=="undefined" ||
+                $.cookie("c_kakaoId") == "" ||
+                $.cookie("c_phone")=="" ||
+                $.cookie("c_userName")=="" ||
+                $.cookie("c_authNumber")==""
+
+                ) {
+
+            settingLogInOut("");
+            var loginTemplate = $("#content_login").html();
+            $("#main_body").html(_.template(loginTemplate,{}));
+
+        }
+        else{
+            _onBodyLoad($.cookie("c_kakaoId"),
+                    $.cookie("c_phone"),
+                    $.cookie("c_userName"),
+                    $.cookie("c_authNumber")
+            );
+        }
+
+    }
+
+    function onClick_DeleteCookies(){
+        $.cookie("c_kakaoId", "");
+        $.cookie("c_phone", "");
+        $.cookie("c_userName", "");
+        $.cookie("c_authNumber", "");
+    }
+
+    function _onBodyLoad(kakaoId, phone, userName, authNumber){
+
+        g_jUtil = new JLIB.Util();
+
+        var dataParams = {phone:phone, kakaoId:kakaoId, name:userName, authNumber:authNumber, deviceId:"123"};
+        var loginStr = "http://api.homee.kr/login/login.ajax";
+
+        ajaxPost(loginStr, dataParams, function(data, textStatus, request) {
+
+
+
+            if( data.result ){
+                $.cookie("c_kakaoId", kakaoId);
+                $.cookie("c_phone", phone);
+                $.cookie("c_userName", userName);
+                $.cookie("c_authNumber", authNumber);
+
+                settingLogInOut(kakaoId);
+
+                /* BEGIN - 로그인 성공!! 정보 얻기 */
+                ajaxPost("http://api.homee.kr/main/info.ajax", {}, function(data, textStatus, request){
+
+                    if( data.data.newPlaces.length >= 2 )
+                    {
+                        mainPageData.newPlaces = data.data.newPlaces;
+                    }
+
+                    if( data.data.branches.length >= 2 )
+                    {
+                        var i = 0;
+                        var initCount = data.data.branches.length;
+                        while(data.data.branches.length >= 3 && i < initCount)
+                        {
+                            if(data.data.branches[0].name == '가맹점명' )
+                            {
+                                data.data.branches.shift();
+                                initCount--;
+                            }
+
+                            i++;
+                        }
+
+                        mainPageData.branches = data.data.branches;
+                    }
+
+                    ajaxPost("http://api.homee.kr/main/userInfo.ajax", {}, function(data, textStatus, request){
+
+                        mainPageData.coupons = data.data.coupons;
+                        mainPageData.points = data.data.points;
+                        mainPageData.gifts = data.data.gifts;
+
+                        loadMainPage();
+
+
+                    }, null);
+
+                }, null);
+                /* END - 로그인 성공!! 정보 얻기 */
+
+            }
+            else{
+                alert("정보가 올바르지 않습니다!");
+                settingLogInOut("");
+            }
+
+        }, function(xhr, textStatus, errorThrown){
+
+            settingLogInOut("");
+        });
+
+    }
+
+    function ajaxPost(urlStr, dataParams, fn, errFn)
+    {
+        $.ajax({type:"POST", url: urlStr,
+            data:dataParams,
+            success: fn, xhrFields : { withCredentials: true}, error: errFn });
+    }
+
+    function loadMainPage(){
+        $.get("public/js/homee/0_main_page.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate,mainPageData))
+        });
+    }
+
+    function _onClickCommon(collabseHide, toggleSide){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        if(collabseHide)
+        {
+            $("#navbar").collapse("hide");
+        }
+
+        $("#li_franchise").removeClass();
+        $("#li_event").removeClass();
+        $("#li_event_result").removeClass();
+        $("#li_setting").removeClass();
+
+        if( toggleSide )
+        {
+            onClick_Menu(false);
+        }
+    }
+
+    function onClick_Franchise(collapseHide, toggleSide){
+        _onClickCommon(collapseHide, toggleSide);
+
+        $("#li_franchise").addClass("active");
+
+
+
+        $.get("public/js/homee/1_franchise.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate,{items: franchiseDataList, test:"afadsfas"}))
+        });
+
+    }
+    function onClick_Event(collapseHide, toggleSide){
+
+
+        ajaxPost("http://api.homee.kr/event/list.ajax", {}, function(data, textStatus, request){
+
+            if( data.result ==true )
+            {
+                _onClickCommon(collapseHide, toggleSide);
+
+                $("#li_event").addClass("active");
+
+                if( data.data.length >= 1 )
+                {
+                    eventDataList = data.data;
+                }
+
+                $.get("public/js/homee/2_event.html", function(textTemplate) {
+                    $("#main_body").html(_.template(textTemplate,{items: eventDataList, test:"afadsfas"}))
+                });
+            }
+
+
+        }, null);
+
+
+    }
+    function onClick_EventResult(collapseHide, toggleSide){
+        _onClickCommon(collapseHide, toggleSide);
+
+        $("#li_event_result").addClass("active");
+
+
+
+        $.get("public/js/homee/3_event_result.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate,{items: eventResultDataList, test:"afadsfas"}))
+        });
+    }
+    function onClick_Settings(collapseHide, toggleSide){
+        _onClickCommon(collapseHide, toggleSide);
+
+        $("#li_setting").addClass("active");
+
+
+
+        $.get("public/js/homee/4_setting.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate, {settingData: settingTempData}))
+        });
+    }
+
+    function onClick_BranchList(){
+        _onClickCommon(false, false);
+
+
+
+        $.get("public/js/homee/5_branch.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate,{items: mainPageData.branches, test:"afadsfas"}))
+        });
+    }
+
+    function onClick_FranchiseDetail(index){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        $.get("public/js/homee/91_franchise_detail.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate, {item: franchiseDataList[index], test:"afadsfas"}))
+        });
+    }
+
+    function onClick_EventDetail(index){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        $.get("public/js/homee/92_event_detail.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate, {item: eventDataList[index], test:"afadsfas"}))
+        });
+    }
+
+    function onClick_BranchDetail(index){
+
+        var tempBranchData = mainPageData.branches[index];
+
+        ajaxPost("http://api.homee.kr/branch/detail.ajax", {branchId: tempBranchData.branchId}, function(data, textStatus, rhx){
+              if( data.result ){
+                  document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+                  var tempBranchDetail = data.data;
+                  //var tempBranchDetail = {"branchId":"2018121515","lng":127.0624069,"address2":"동일로 1413 남성빌딩","phone":"0230151100","address1":"서울특별시 노원구","intro":"아리 가맹점은 전국에서 가장 맛좋은 커피원드를 사용해요","name":"스타벅스","limitPoint":0.0,"openTime":"매일 3시 ~ 24시 연중무휴","categoryName":"커피/음료","lat":37.6562713,"content":"주차가능 포장 신용카드"};
+
+                  $.get("public/js/homee/93_branch_detail.html", function(textTemplate) {
+                      $("#main_body").html(_.template(textTemplate, {item: tempBranchDetail, thumbnail:tempBranchData.thumbnail}))
+                  });
+              }
+        }, null);
+
+
+    }
+
+    function onClick_BranchDetailById(branchId){
+
+        var tempObj = {};
+
+        for(var i=0; i<mainPageData.branches.length; i++){
+            if( mainPageData.branches[i].branchId == branchId ) {
+                onClick_BranchDetail(i);
+                break;
+            }
+        }
+
+        return tempObj;
+    }
+
+    function onClick_MyTicket(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        var tempTicketList = [
+            {num: 1097, name:"폴바셋바리스타 강남점", issueNo: 58395722, date:"2017-01-27", content:""},
+            {num: 1097, name:"엔젤리너스 서초점", issueNo: 58395723, date:"2017-01-28", content:"9등 1,000P 당첨"},
+            {num: 1097, name:"엔젤리너스 서초점", issueNo: 58395724, date:"2017-01-29", content:"9등 1,000P 당첨"},
+            {num: 1097, name:"엔젤리너스 서초점", issueNo: 58395725, date:"2017-01-30", content:""},
+        ];
+
+
+
+        $.get("public/js/homee/6_ticket_list.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate, {items:tempTicketList}));
+        });
+    }
+
+    function onClick_MyCoupon(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        $.get("public/js/homee/95_mycoupon.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate, {}))
+        });
+    }
+
+    function onClick_MyPoint(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        $.get("public/js/homee/94_mypoint.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate, {}))
+        });
+    }
+
+    function onClick_MyGift(){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        $.get("public/js/homee/96_mygift.html", function(textTemplate) {
+            $("#main_body").html(_.template(textTemplate, {}))
+        });
+    }
+
+    var g_enteringEventId = -1;
+    function onClick_EventEnterPopup(open, eventId){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        if( open == true )
+       {
+            g_enteringEventId = eventId;
+            $("#div_pop_event_enter").css("visibility", "visible");
+       }
+       else
+       {
+           $("#div_pop_event_enter").css("visibility", "hidden");
+       }
+    }
+
+    function onClick_EventEnter(){
+        onClick_EventEnterPopup(false, 0);
+
+        var eventEnterUrl = "http://api.homee.kr/event/enter.ajax";
+        ajaxPost(eventEnterUrl, {eventId: g_enteringEventId}, function(data, resultStr, tempData){
+              alert(resultStr);
+        }, null);
+    }
+
+    function onClick_SendPresentPopup(open, type, param1){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        if( open == true )
+        {
+            $("#div_pop_present").css("visibility", "visible");
+        }
+        else
+        {
+            $("#div_pop_present").css("visibility", "hidden");
+        }
+    }
+
+    function onClick_SendPresent(type, param1){
+        onClick_SendPresentPopup(false, -1, {});
+        // type: 0-응모권, 1-상품권
+        if( type == 0 ){
+
+        }
+        else if( type == 1 ){
+
+        }
+    }
+
+    function onClick_TicketOpenPopup(open){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        if( open == true )
+        {
+            $("#div_pop_ticket_open").css("visibility", "visible");
+        }
+        else
+        {
+            $("#div_pop_ticket_open").css("visibility", "hidden");
+
+            g_scratchCount = 0;
+            $( "#img_ticket_scratch").attr("src", "public/images/homee/img_ticket_scratch.png");
+        }
+    }
+
+    function onClick_GiftBuyPopup(open){
+
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        if( open == true )
+        {
+            $("#div_pop_gift_buy").css("visibility", "visible");
+        }
+        else
+        {
+            $("#div_pop_gift_buy").css("visibility", "hidden");
+        }
+    }
+
+    function onClick_GiftBuy(){
+        onClick_GiftBuyPopup(false);
+    }
+
+    function onClick_BuyWithHomee(open){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+        if( open == true )
+        {
+            $("#div_pop_buy_with_homee").css("visibility", "visible");
+        }
+        else
+        {
+            $("#div_pop_buy_with_homee").css("visibility", "hidden");
+        }
+    }
+
+    function onClick_Menu(show){
+        if( show ){
+            $("#wrapper").toggleClass("toggled");
+            $("#homee_navbar").css("visibility", "hidden");
+            $("#main_body").toggleClass("toggled");
+        }
+        else{
+            $("#wrapper").removeClass("toggled");
+            $("#homee_navbar").css("visibility", "visible");
+            $("#main_body").removeClass("toggled");
+        }
+    }
+
+    function settingLogInOut(userName)
+    {
+        var tempStr = '';
+        if( userName != '' ) {
+            tempStr =   userName +
+                    '&nbsp;&nbsp;&nbsp;' +
+                    '<img style="width:25%" src="public/images/homee/ic_logout.png">' +
+                    '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
+                    '<img style="width:10%" src="public/images/homee/ic_close.png" onclick="onClick_Menu(false);">';
+        }
+        else{
+            tempStr =  '&nbsp;&nbsp;&nbsp;' +
+                    '<img style="width:25%" src="public/images/homee/ic_login.png">' +
+                    '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
+                    '<img style="width:10%" src="public/images/homee/ic_close.png" onclick="onClick_Menu(false);">';
+        }
+
+        $("#log_in_out").html(tempStr);
+    }
+
+
+
+    </script>
+
+</head>
+<body onload="onBodyLoad();">
+
+<!-- Sidebar -->
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+       <!--<h3>test</h3>  <img style="width:10%" src="public/images/homee/ic_close.png" onclick="onClick_Menu(false);">
+       -->
+
+        <div>
+            <table>
+                <tr><td><br><br></td></tr>
+                <tr>
+                    <td id="log_in_out">
+                    </td>
+                </tr>
+                <tr>
+                    <td><hr width="250px"> </td>
+                </tr>
+                <tr>
+
+                    <td style="text-align: left">
+                        <ul class="sidebar-nav">
+                            <li id="li_franchise"><a onclick="onClick_Franchise(true, true);"><img style="width: 10%" src="public/images/homee/ic_branch.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;가맹점</a></li>
+                            <li id="li_event"><a onclick="onClick_Event(true, true);"><img style="width: 10%" src="public/images/homee/ic_event.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 이벤트</a></li>
+                            <li id="li_event_result"><a onclick="onClick_EventResult(true, true);"><img style="width: 10%" src="public/images/homee/ic_event_result.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이벤트 결과보기</a></li>
+                            <li id="li_setting"><a onclick="onClick_Settings(true, true);"><img style="width: 10%" src="public/images/homee/ic_setting.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 설정</a></li>
+                        </ul>
+                    </td>
+
+                </tr>
+                <tr>
+                    <a onclick="onClick_DeleteCookies();"><u>쿠키 삭제</u></a>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->
+
+<nav id="homee_navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+           <!--<button id="navbar_button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+                <!--<button id="navbar_button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar">-->
+               <!-- <button id="navbar_button2" class="navbtn" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>-->
+            <table>
+                <tr>
+                    <td><img id="navbar_button2" class="navbtn" type="button" src="public/images/homee/navbtn.png"></td>
+                    <td><a class="navbar-brand" onclick="onBodyLoad();">homee</a></td>
+                    <td><img class="navbar-search-icon" src="public/images/homee/icon_search.png" style="width: 36px"></td>
+                </tr>
+
+            </table>
+
+
+
+
+
+        </div>
+        <!--
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li id="li_franchise"><a onclick="onClick_Franchise(true, false);">가맹점</a></li>
+                <li id="li_event"><a onclick="onClick_Event(true, false);">이벤트</a></li>
+                <li id="li_event_result"><a onclick="onClick_EventResult(true, false);">이벤트 결과보기</a></li>
+                <li id="li_setting"><a onclick="onClick_Settings(true, false);">설정</a></li>
+            </ul>
+        </div>--><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- 컨테이너 -->
+<div class="container" style="padding-top: 55px">
+
+    <!-- Example row of columns -->
+    <div id="main_body" class="row">
+
+    </div>
+
+
+    <div class="selective-layout">
+
+    </div>
+
+    <div id="div_pop_event_enter" style="visibility: hidden; position: absolute; left: 0px; top: 0px; width:100%; height:100%; z-index: 1040; background: rgba(0,0,0,0.31)">
+        <div style="position: absolute; left: 50%; top: 50%; width:300px; height:500px; z-index: 1050; background: white; margin-top: -250px; margin-left: -150px">
+            <table>
+                <tr>
+                    <td style="width: 80%">이벤트 응모</td>
+                    <td><img width="50%" src="public/images/homee/ic_close.png" onclick="onClick_EventEnterPopup(false);"></td>
+                </tr>
+                <tr>
+                    <td>
+                    <br>
+                    <font color="black"><b>보유 감자 쿠폰</b></font><br>
+                    <img width="75%" src="public/images/homee/img_potato_coupon.png"><br><br>
+                    <input size="4">장으로 이벤트에 응모합니다!<br><br>
+                    <img  width="5%" src="public/images/homee/ic_info.png"> 이벤트에 사용된 감자쿠폰은 취소하실 수 없습니다.
+                   <br><br><button class="homee_btn" onclick="onClick_EventEnter();">응모하기</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="div_pop_present" style="visibility: hidden; position: absolute; left: 0px; top: 0px; width:100%; height:100%; z-index: 1040; background: rgba(0,0,0,0.31)">
+        <div style="position: absolute; left: 50%; top: 50%; width:300px; height:500px; z-index: 1050; background: white; margin-top: -250px; margin-left: -150px">
+            <table>
+                <tr>
+                    <td style="width: 80%">선물하기</td>
+                    <td><img width="50%" src="public/images/homee/ic_close.png" onclick="onClick_SendPresentPopup(false, -1, {});"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <font color="black"><b>폴바셋바리스타 강남점</b></font><br>
+                        발행번호. 35749375493
+                        <img width="75%" src="public/images/homee/img_ticket.png"><br><br>
+                        선물할 친구 연락처
+                        <input size="25" value="받는 분(이름/초성/전화번호)"><br><br>
+                        <hr width="250px">
+                        <img  width="5%" src="public/images/homee/ic_info.png"> 이벤트에 사용된 감자쿠폰은 취소하실 수 없습니다.
+                        <br><br><button class="homee_btn" onclick="onClick_SendPresent(0, {});">선물하기</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="div_pop_ticket_open" style="visibility: hidden; position: absolute; left: 0px; top: 0px; width:100%; height:100%; z-index: 1040; background: rgba(0,0,0,0.31)">
+        <div id="div_ticket_scratch" style="position: absolute; left: 50%; top: 50%; width:300px; height:300px; z-index: 1050; background: #ffffff; margin-top: -250px; margin-left: -150px">
+            <table>
+                <tr>
+                    <td style="width: 80%"></td>
+                    <td><img width="50%" src="public/images/homee/ic_close.png" onclick="onClick_TicketOpenPopup(false);"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+
+                        <img id="img_ticket_scratch" width="75%" src="public/images/homee/img_ticket_scratch.png"><br><br>
+
+
+
+                        <!--<br><br><button class="homee_btn" onclick="onClick_SendPresent(0, {});">선물하기</button>-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="div_pop_gift_buy" style="visibility: hidden; position: absolute; left: 0px; top: 0px; width:100%; height:100%; z-index: 1040; background: #ececec">
+        <div id="div_pop_select_amount" style="visibility: hidden; position: absolute; left: 0px; top: 0px; width:100%; height:100%; z-index: 1045; background: rgba(0,0,0,0.31)">
+            <div style="position: absolute; left: 50%; top: 50%; width:250px; height:320px; z-index: 1050; background: white; margin-top: -250px; margin-left: -150px">
+            </div>
+        </div>
+        <div>
+            <div class="base_div">
+            <h3>
+                <table>
+                    <tr>
+                        <td> <img width="50%" src="public/images/homee/ic_close.png" onclick="onClick_GiftBuyPopup(false);"> </td>
+                        <td style="color:red; font-size:1.2em; text-align: left"><b>상품권 구매</b></td>
+                    </tr>
+                </table>
+            </h3>
+            </div>
+            <div class="hm-col-12">
+                <div class="hm-col-6" style="background: #ececec">
+                    <div class="base_div"  onclick="onClick_MyTicket();">
+                        <table class="tg" width="100%">
+                            <tr>
+                                <th class="tg-info" colspan="2" width="60%">
+                                    <div style="float:left; text-align: left">
+                                        <img src="public/images/homee/ic_point.png" width="40%">
+                                    </div>
+                                </th>
+                                <th class="tg-yw4l" rowspan="2" style="vertical-align: top">
+                                    <div style="float:right; text-align: right">
+                                        <img src="public/images/homee/ic_alert.png" width="70%">
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="tg-info2" colspan="2">내 포인트</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-info2" colspan="3" style="font-size: 3em">58m600</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-info2" colspan="3" style="text-align: right">P</td>
+                            </tr>
+                            <tr><td height="60px"></td></tr>
+                        </table>
+
+
+                    </div>
+                </div>
+                <div class="hm-col-6" style="background: #ececec">
+                    <div class="base_div"  onclick="onClick_MyTicket();">
+                        <table id="myinfotable" class="tg" width="100%">
+                            <tr>
+                                <th class="tg-info" colspan="2" width="60%">
+                                    <div style="float:left; text-align: left">
+                                        <img src="public/images/homee/ic_giftcard.png" width="40%">
+                                    </div>
+                                </th>
+                                <th class="tg-yw4l" rowspan="2" style="vertical-align: top">
+                                    <div style="float:right; text-align: right">
+                                        <img src="public/images/homee/ic_alert.png" width="70%">
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="tg-info2" colspan="2">감자쿠폰</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-info2" colspan="3" style="font-size: 3em">38</td>
+                            </tr>
+                            <tr>
+                                <td class="tg-info2" colspan="3" style="text-align: right">장</td>
+                            </tr>
+                            <tr><td height="60px"></td></tr>
+                        </table>
+
+
+                    </div>
+                </div>
+                </div>
+            <div class="base_div" style="text-align: left; padding-left: 10px">
+                <img width="10%" src="public/images/homee/icon_search.png">&nbsp;&nbsp;가맹점 검색
+            </div>
+            <div class="base_div">
+                <table>
+                    <tr style="font-size: 1.5em; text-align: left; padding-left: 5px; height: 75px;"><th>가맹점</th><th>홈플러스 서초점</th></tr>
+                    <tr style="padding-left: 5px; height: 75px;"><td colspan="2"><img  width="5%" src="public/images/homee/ic_info.png">본 가맹점의 상품권 구매 한도가 281,000원 남았습니다.</td></tr>
+                    <tr style="font-size: 1.5em; text-align: left; padding-left: 5px; height: 75px;"><td>상품권 금액</td><td>₩ 3,000</td></tr>
+                </table>
+            </div>
+            <div>
+                <br>
+                <br>
+                <button style="padding-left: 50px; padding-right: 50px" class="homee_btn" onclick="onClick_GiftBuy();">구매하기</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="div_pop_buy_with_homee" style="visibility: hidden; position: absolute; left: 0px; top: 0px; width:100%; height:100%; z-index: 1040; background: rgba(0,0,0,0.31)">
+        <div style="position: absolute; left: 50%; top: 50%; width:300px; height:500px; z-index: 1050; background: white; margin-top: -250px; margin-left: -150px;" onclick="onClick_BuyWithHomee(false);">
+        <img style="width:100%" src="public/images/homee/temp_buy_with_homee.png">
+        </div>
+    </div>
+
+        <hr>
+    <footer>
+        <p>&copy; HOMEE 2017</p>
+    </footer>
+</div>
+<!-- /컨테이너-->
+
+
+<!-- 템플릿 모음 -->
+
+
+<script type="text/template" id="content_login">
+  <div class="login">
+      <div class="login_upper">
+            <img src="public/images/homee/loading_logo.png" width="25%">
+      </div>
+      <div class="login_lower">
+          <div style="text-align: left">
+          <br>
+              <span style="padding-left: 20%">카카오 아이디&nbsp;</span><span style="padding-left: 20px"><input id="txt_kakaoId"></span>
+              <br><br>
+              <span style="padding-left: 20%">전화번호&nbsp;</span><span style="padding-left: 50px"><input id="txt_phone">&nbsp;<button onclick="onClick_SendAuthNum();">인증번호 발송</button></span>
+              <br><br>
+              <span style="padding-left: 20%">인증 번호&nbsp;</span><span style="padding-left: 50px"><input id="txt_authNumber"></span>
+              <br><br>
+              <span style="padding-left: 20%">이 름&nbsp;</span><span style="padding-left: 75px"><input id="txt_userName"></span>
+          </div>
+          <div>
+          <br>
+          <button class="homee_btn h_btn_login" onclick="onClick_Login();">로그인</button></td>
+          <br>
+
+          </div>
+      </div>
+
+  </div>
+</script>
+
+<script type="text/template" id="content_test">
+    <div><@- potato @>개</div>
+</script>
+
+<script type="text/template" id="content_event"></script>
+
+<script type="text/template" id="content_event_result"></script>
+
+<script type="text/template" id="content_settings"></script>
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<!--<script src="public/js/vendor/bootstrap.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+<script src="public/js/vendor/jquery.cookie.js"></script>
+<script src="public/js/vendor/bootstrap.js"></script>
+<script src="public/js/vendor/underscore-min.js"></script>
+<script type="text/javascript">
+    _.templateSettings = {
+        interpolate: /\<\@\=(.+?)\@\>/gim,
+        evaluate: /\<\@([\s\S]+?)\@\>/gim,
+        escape: /\<\@\-(.+?)\@\>/gim
+    };
+</script>
+<script src="public/JungLib.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+
+    $("#navbar_button2").click(function(e) {
+        e.preventDefault();
+        onClick_Menu(true);
+    });
+
+    var g_scratchCount = 0;
+    var MAX_SCRATCH_COUNT = 4;
+    $( "#div_ticket_scratch" ).bind("touchmove",function(e) {
+        e.preventDefault();
+
+        g_scratchCount++;
+
+        var tempNum = Math.floor(g_scratchCount / 16);
+
+        if( 0 < tempNum && tempNum <= MAX_SCRATCH_COUNT ){
+            var imgSrcStr = "public/images/homee/img_ticket_scratch_" + tempNum + ".png";
+            $( "#img_ticket_scratch").attr("src", imgSrcStr);
+        }
+        else {
+
+        }
+    });
+</script>
+
+</body>
+
+</html>

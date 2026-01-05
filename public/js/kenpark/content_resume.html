@@ -1,0 +1,189 @@
+<div class="kp-col">
+    <h3><b>Professional profile:</b></h3>
+    <p>Experienced game programmer who has ability to quickly learn new development tools & languages and has many years of experience in Korean game industry which features leading-edge online & mobile gaming and also a dedicated team member with a passion for video games and the game industry. </p>
+</div>
+
+<div class="kp-col">
+    <h3><b>Education:</b></h3>
+    <p>Ajou University, March 2000 – June 2007 (2003-2005, Military Service in Korea Army)
+    <br>Bachelor’s degree in computer science
+    </p>
+</div>
+    
+<div class="kp-col">
+    <h3><b>Skills:</b></h3>
+    <p>8 years of game programming experience, Object-Oriented Programming, C++ C#, C, 3D Math, Scrum and agile development, Mobile(iOS / Android) Game Development, Online Game Development, Skeletal Animation</p>
+</div>
+
+<div class="kp-col">
+    <h3><b>Tools:</b></h3>
+    <p>Visual Studio, SVN, Git, Unity Engine, Unreal Engine 3, Cocos2D, Blender</p>
+</div>
+
+<div class="kp-col">
+    <h3><b>Work Experience:</b></h3>
+    <div>
+        <%
+        _.each(items, function(item, i){            
+        %>
+        <div>
+            <div class="col-sm-12">
+                <h4><%= item.title %></h4>
+            </div>
+            <div class="col-sm-4">
+                <p align="center"><img src="<%= item.image %>" style="width: 200px"></p>
+
+                <%
+                if( item.portfolio != null){
+                %>
+                <p align="center"><a onclick="onClick_Portfolio(<%= item.portfolio %>);">view video</a></p>
+                <%
+                }
+                %>
+
+                <%
+                if( item.link != null){
+                %>
+                <p align="center"><a href="<%= item.link %>">link</a></p>
+                <%
+                }
+                %>
+
+            </div>
+            <div class="col-sm-8">
+            <p><%= item.summary %></p>
+            <ul style="list-style-type:circle">
+
+            <%
+            _.each(item.descList, function(desc, j){            
+            %>
+
+                <li><%= desc %></li>
+
+            <%
+            });
+            %>
+            </ul>
+            </div>
+        </div>
+        <br><br>
+        <%
+        });
+        %>
+
+    </div>
+
+    <!--
+    <div>
+        <div class="col-sm-12">
+            <h4>Creative Director & Programmer - Popomint (Seoul, Korea, 2016-Present)</h4>
+        </div>
+
+        <div class="col-sm-4">
+            <p align="center"><img src=public/images/kpresume/port_pic10.jpg style="width: 200px"></p>
+        </div>
+
+        <div class="col-sm-8">
+            <p>Currently working as Director and Programmer at Popomint, an Indie Game Company</p>
+            <ul style="list-style-type:circle">
+            <li>Titles under development : Polar Bear Poe (2016 TBA, iOS/Android), Exodus The Game (2017 TBA, iOS/Android) </li>
+            <li>Developing using Unity Engine and C#. </li>
+            </ul>
+        </div>
+    
+        <br><br>
+    
+        <div>
+            <div class="col-sm-12">
+                <h4>Senior Game Programmer (Lead Battle Programming) - T3 Entertainment Co., Ltd. (Seoul, Korea, 2013-2016)</h4>
+            </div>
+            <div class="col-sm-4">
+                <p align="center"><img src=public/images/kpresume/port_pic1.jpg style="width: 200px"></p>
+                <p align="center"><a onclick="onClick_Portfolio(1);">view video</a></p>
+            </div>
+            <div class="col-sm-8">
+            <p>Led all aspects of programming for the battle part (main part of the game) of 3d Turn-based strategy which features online PVP mode.</p>
+            <ul style="list-style-type:circle">
+            <li>Released Titles : World Conquest 1 (2014 September, iOS/Android), World Conquest 2 (2016 March coming soon, iOS/Android) (Online 3D Turn-based strategy game)</li>
+            <li>Developed using Unity Engine and C#. Implemented Online PVP Battle with TCP based network.</li>
+            <li>As a lead battle programmer, led all aspects of battle stuffs. 3D character animation(Unity Mecanim System), 3d battle map and environment, implementing battle tactics rules, AI programming, battle UI, battle network programming etc.</li>
+            </ul>
+            </div>
+        </div>
+        <br><br>
+
+        <div>
+            <div class="col-sm-12">
+            <h4>Senior Game Programmer – PlayEarth Co., Ltd. (Seoul, Korea, 2012 – 2013)</h4>
+            </div>
+            <div class="col-sm-4">
+            <p align="center"><img src=public/images/kpresume/port_pic2.jpg style="width: 200px"></p>
+            <p align="center"><a onclick="onClick_Portfolio(2);">view video</a></p>
+            </div>
+            <div class="col-sm-8">
+            <p></p>
+            <ul style="list-style-type:circle">
+            <li>Released Title : Kaizin Rumble (2013 August, iOS/Android, Online Card Battle RPG)</li>
+            <li>Developed using Unity Engine and NGUI for 2D Card battle RPG where players have adventures collecting hero cards and training them through slot machine-like battles.</li>
+            <li>Had been in charge of overall gameplay programming including battle programming and story system etc.</li>
+            </ul>
+            </div>
+        </div>
+        <br><br>
+
+        <div>
+            <div class="col-sm-12">
+            <h4>Indie Game Developer – B.Haus (Seoul, Korea, 2011 – 2012)</h4>
+            </div>
+            <div class="col-sm-4">
+            <p align="center"><img src=public/images/kpresume/port_pic3.jpg style="width: 200px"></p>
+            <p align="center"><a onclick="onClick_Portfolio(3);">view video</a></p>
+            </div>
+            <div class="col-sm-8">
+            <p></p>
+            <ul style="list-style-type:circle">
+            <li>Title : Castle of Crystals (iOS, casual weapon-based 3d fighting game)</li>
+            <li>Failed to release due to financial issue, Personal experimental work as a game designer and producer.</li>
+            </ul>
+            </div>
+        </div>
+        <br><br>
+
+        <div>
+            <div class="col-sm-12">
+            <h4>Animation Programmer – Softnyx Co., Ltd (Seoul, Korea, 2009-2010)</h4>
+            </div>
+            <div class="col-sm-4">
+            <p align="center"><img src=public/images/kpresume/port_pic5.JPG style="width: 200px"></p>
+            <p align="center"><a onclick="onClick_Portfolio(4);">view video</a></p>
+            </div>
+            <div class="col-sm-8">
+            <p></p>
+            <ul style="list-style-type:circle">
+            <li>Title : Project T.A.R (Action MMO RPG)</li>
+            <li>Developed using Unreal Engine 3 and C++</li>
+            <li>Had been in charge of animation programming of player characters, NPCs and monsters using Unreal Editor’s Anim Tree system. Also developed character’s control, action, and skill system.</li>
+            </ul>
+            </div>
+        </div>
+        <br><br>
+
+        <div>
+            <div class="col-sm-12">
+            <h4>Gameplay Programmer – Joycity Co., Ltd (Seongnam, Korea, 2007-2009)</h4>
+            </div>
+            <div class="col-sm-4">
+            <p align="center"><img src=public/images/kpresume/port_pic4.jpg style="width: 200px"></p>
+            <p align="center"><a onclick="onClick_Portfolio(5);">view video</a></p>
+            </div>
+            <div class="col-sm-8">
+            <p></p>
+            <ul style="list-style-type:circle">
+            <li>Released Title : Aeronauts (PC Online 3D Flight Battle)</li>
+            <li>Developed using studio’s own house-built engine with C++</li>
+            <li>As a gameplay programmer, was in charge of implementing battle objects, aircraft’s skills and other battle stuffs.</li>
+            </ul>
+            </div>
+        </div>
+    </div>-->
+</div>

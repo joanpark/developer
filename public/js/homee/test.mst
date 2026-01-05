@@ -1,0 +1,7 @@
+    <div class="kp-col">
+    <h3><b>Template Test</b></h3>
+    <p> This page is for testing template. </p>
+    <p><img src=public/images/kpresume/location_icon.png style="width: 32px"> Seoul, South Korea</p>
+    <p><img src=public/images/kpresume/link_icon.png style="width: 32px"> <a href="ken-park.appspot.com">ken-park.appspot.com </a></p>
+    <p><img src=public/images/kpresume/email_icon.jpg style="width: 32px"> ken.park.kr@gmail.com</p>
+    </div>
